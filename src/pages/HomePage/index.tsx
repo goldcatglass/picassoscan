@@ -1,8 +1,11 @@
-import {FC} from 'react'
+import { FC } from 'react'
 import { Home } from '@/components/Home'
+import Page from '@/layouts/Page'
 const HomePage: FC = () => {
   return (
-    <Home />
+    <Page title="Home">
+      <Home />
+    </Page>
   )
 }
 

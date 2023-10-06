@@ -1,9 +1,20 @@
-import React from 'react';
 import { FC } from 'react';
+import Footer from '../Footer';
+import Header from '../Header';
+import { TPageProps } from './types';
 
-const Page: FC = () => {
+const Page: FC<TPageProps> = ({ children, title, link, text }) => {
+    const pageTitle = title ? `| ${title}` : '';
+    const pageText = text || '';
+    const pageLink = link || '';
     return (
-        <div>Page</div>
+        <>
+            <div className={`wrapper`}>
+                <Header />
+                <main className="main">{children}</main>
+                <Footer />
+            </div>
+        </>
     )
 }
 

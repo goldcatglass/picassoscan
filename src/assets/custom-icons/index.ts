@@ -1,0 +1,1 @@
+export { ReactComponent as CheckCircleSvg } from './check-circle.svg';
